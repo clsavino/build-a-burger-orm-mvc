@@ -12,19 +12,20 @@ li {
     margin-top: 20px;
 }
 
-.burgerType {
+.heading {
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
+}
 
+.burgerType {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .input h2 {
     text-align: center;
     font-weight: bold;
-}
-
-.textarea {
-  text-align: center;
 }
 
 .btnSubmit {
@@ -36,6 +37,10 @@ li {
     margin-bottom: 10px;
 }
 .input textarea {
+  text-align: center;
+}
+
+.textarea {
   text-align: center;
 }
 
