@@ -26,5 +26,7 @@ var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
 // Set up the server
+console.log('\nserver.js creating connection')
 var port = 3000;
 app.listen(port);
+console.log('\nserver.js listening for routes');

@@ -1,0 +1,65 @@
+    <div class="container">
+
+        <div class="jumbotron">
+
+            <h1 class="text-center"> Build A Burger</h1>
+            <hr>
+            <img src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
+            <br>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 ">
+                <div class="col-sm-4">
+                    <div class="leftBurgers">
+
+                        <ul>
+                          {{#each burgers}}
+                            {{#unless this.devoured}}
+                              <li>
+                                {{this.burger_name}}
+                                <form action="burgers/updateOne/{{this.id}}?_method=PUT" method="POST">
+                                  <input type="hidden" name="devoured" value="true">
+                                  <button type="submit">Devour it!</button>
+                                </form>
+                              </li>
+                            {{/unless}}
+                          {{/each}}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input">
+                        <h2>Add a Burger</h2>
+                        <div class="form-group">
+                            <form method="POST" action="burgers/insertOne" class="addOne">
+                                <textarea type="text" name="burger_name"></textarea>
+                                <button type="submit">Create Your Burger!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="rightBurgers">
+                        <ul>
+                          {{#each burgers}}
+                            {{#if this.devoured}}
+                              <li>
+                                {{this.burger_name}}
+                              </li>
+                            {{/if}}
+                          {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+            </div>
+
+        </div>
+
+    </div>

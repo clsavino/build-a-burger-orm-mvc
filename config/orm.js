@@ -21,8 +21,8 @@ function objToSql(ob) {
 
 // Retrieve all the data from the database
 var orm = {
-  SelectAll: function (tableInput, cb) {
-    var queryString = 'SELECT * FROM ' + tableInput + ';';
+  selectAll: function (table, cb) {
+    var queryString = 'SELECT * FROM ' + table + ';';
     connection.query(queryString, function (err, result) {
       if (err) throw err;
       cb(result);
@@ -41,7 +41,7 @@ var orm = {
     queryString = queryString + printQuestionMarks(vals.length);
     queryString = queryString + ') ';
 
-    console.log(queryString);
+    console.log('\n insertOne queryString in orm.js',queryString);
 
     connection.query(queryString, vals, function (err, result) {
       if (err) throw err;

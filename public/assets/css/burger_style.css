@@ -1,0 +1,24 @@
+body{
+    background-color: #fde3a7;
+}
+
+li {
+  list-style-type: none;
+}
+
+.jumbotron {
+    color: black;
+    /*opacity: .75;*/
+    margin-top: 20px;
+}
+
+#submit {
+    background: firebrick;
+    color: black;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
