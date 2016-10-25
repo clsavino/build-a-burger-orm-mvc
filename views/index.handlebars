@@ -4,13 +4,13 @@
 
             <h1 class="text-center"> Build A Burger</h1>
             <hr>
-            <img src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
+            <img class="text-center" src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
             <br>
         </div>
 
         <div class="row">
 
-            <div class="col-sm-12 ">
+            <div class="col-md-12 ">
                 <div class="col-sm-4">
                     <div class="leftBurgers">
 
@@ -18,10 +18,10 @@
                           {{#each burgers}}
                             {{#unless this.devoured}}
                               <li>
-                                {{this.burger_name}}
+                                <p class="burgerType">{{this.burger_name}}</p>
                                 <form action="burgers/updateOne/{{this.id}}?_method=PUT" method="POST">
                                   <input type="hidden" name="devoured" value="true">
-                                  <button type="submit">Devour it!</button>
+                                  <button class="btnSubmit" type="submit">Devour it</button>
                                 </form>
                               </li>
                             {{/unless}}
@@ -30,25 +30,25 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <div class="input">
-                        <h2>Add a Burger</h2>
+                        <h2  id="add">Add a Burger</h2>
                         <div class="form-group">
                             <form method="POST" action="burgers/insertOne" class="addOne">
-                                <textarea type="text" name="burger_name"></textarea>
-                                <button type="submit">Create Your Burger!</button>
+                                <textarea id="textArea" type="text" name="burger_name"></textarea>
+                                <button id="btnCreate" class="btnSubmit" type="submit">Create Your Burger!</button>
                             </form>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <div class="rightBurgers">
                         <ul>
                           {{#each burgers}}
                             {{#if this.devoured}}
                               <li>
-                                {{this.burger_name}}
+                                <p class="burgerType">{{this.burger_name}}</p>
                               </li>
                             {{/if}}
                           {{/each}}
