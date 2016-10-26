@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "christi",
+    "database": "burgers_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "christi",
+    "database": "burgers_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "christi",
+    "database": "burgers_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
