@@ -3,17 +3,20 @@
         <div class="jumbotron text-center">
 
             <h1> Build A Burger</h1>
-            <hr>
+
+            <!--
+             <hr>
             <img  src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
             <br>
+            -->
         </div>
 
         <div class="row">
 
             <div class="col-md-12 ">
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <div class="leftBurgers">
-                        <p class="heading">Designer Burgers</p>
+                        <h2 class="heading">Designer Burgers</h2>
                         <ul>
                           {{#each burgers}}
                             {{#unless this.devoured}}
@@ -30,12 +33,14 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <div class="input">
-                        <h2  id="add">Add a Burger</h2>
+                        <img  src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
+
+                        <h2  class="heading" id="add">Add a Burger</h2>
                         <div class="form-group">
                             <form method="POST" action="burgers/insertOne" class="addOne text-center">
-                                <textarea id="textArea" type="text" name="burger_name"></textarea>
+                                <textarea id="textArea" type="text" name="burger_name" rows="2" cols="40"></textarea>
                                 <button id="btnCreate" class="btnSubmit" type="submit">Create Your Burger!</button>
                             </form>
                         </div>
@@ -44,7 +49,7 @@
 
                 <div class="col-md-4">
                     <div class="rightBurgers">
-                        <p class="heading">Old Favorites</p>
+                        <h2 class="heading">Old Favorites</h2>
                         <ul>
                           {{#each burgers}}
                             {{#if this.devoured}}
@@ -57,10 +62,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-2">
-            </div>
-
         </div>
 
     </div>
