@@ -2,13 +2,14 @@
 
         <div class="jumbotron text-center">
 
-            <h1> Build A Burger</h1>
-
-            <!--
-             <hr>
-            <img  src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
-            <br>
-            -->
+            <h1>Build A Burger</h1>
+            <img  src="../assets/img/burger2.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger3.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger7.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger4.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger5.png" alt="burger icon" height="100" width="100"/>
+            <img  src="../assets/img/burger6.png" alt="burger icon" height="100" width="100"/>
         </div>
 
         <div class="row">
@@ -35,13 +36,23 @@
 
                 <div class="col-md-4 text-center">
                     <div class="input">
-                        <img  src="../assets/img/burger.png" alt="burger icon" height="150" width="150"/>
 
-                        <h2  class="heading" id="add">Add a Burger</h2>
+
+                        <h2  class="heading" id="add">Create A Designer Burger</h2>
                         <div class="form-group">
                             <form method="POST" action="burgers/insertOne" class="addOne text-center">
                                 <textarea id="textArea" type="text" name="burger_name" rows="2" cols="40"></textarea>
                                 <button id="btnCreate" class="btnSubmit" type="submit">Create Your Burger!</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="input">
+                        <h2  class="heading" id="delete">Delete a Burger</h2>
+                        <div class="form-group">
+                            <form action="burgers/delete/burger_name?_method=DELETE" method="POST" class="addOne text-center">
+                                <textarea id="textArea" type="text" name="burger_name" rows="2" cols="40"></textarea>
+                                <button id="btnDelete" class="btnSubmit" type="submit">Delete An Old Favorites Burger!</button>
                             </form>
                         </div>
                     </div>

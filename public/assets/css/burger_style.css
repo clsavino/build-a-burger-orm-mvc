@@ -1,14 +1,7 @@
 body{
     background-color: #fde3a7;
-    font-family: arial;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-    font-weight: bold;
+    font-family: "serif";
+    color: #141414;
 }
 
 .jumbotron {
@@ -16,11 +9,19 @@ h2 {
     margin-top: 20px;
     opacity: .75;
     background-color: #FF851B;
+    margin-bottom: 20px;
+}
+
+.jumbotron h1 {
+  font-size: 36px;
 }
 
 .heading {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
+  color: #FF851B;
+  display:block;
+  margin: 0 auto;
 }
 
 li {
@@ -29,7 +30,6 @@ li {
 
 .burgerType {
   font-size: 18px;
-  font-weight: bold;
 }
 
 .btnSubmit {
@@ -46,8 +46,8 @@ li {
   margin: 0 auto;
 }
 
-.heading {
-  display:block;
+#btnDelete {
+  display: block;
   margin: 0 auto;
 }
 
