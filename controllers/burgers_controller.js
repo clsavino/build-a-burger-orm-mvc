@@ -36,7 +36,7 @@ router.put('/burgers/updateOne/:id', function (req, res) {
   });
 });
 
-router.delete('/burgers/delete/:id', function (req, res) {
+router.delete('/burgers/delete/:burger_name', function (req, res) {
   var condition = 'id = ' + req.params.id;
   console.log('condition',condition);
   burger.delete(condition, function () {

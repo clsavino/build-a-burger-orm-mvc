@@ -3,8 +3,12 @@ body{
     font-family: arial;
 }
 
-li {
-  list-style-type: none;
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+    font-weight: bold;
 }
 
 .jumbotron {
@@ -19,13 +23,13 @@ li {
   font-weight: bold;
 }
 
+li {
+  list-style-type: none;
+}
+
 .burgerType {
   font-size: 18px;
   font-weight: bold;
-}
-
-h2 {
-    font-weight: bold;
 }
 
 .btnSubmit {

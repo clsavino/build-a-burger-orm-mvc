@@ -27,6 +27,8 @@ app.use('/', router);
 
 // Set up the server
 console.log('\nserver.js creating connection')
-var port = 3000;
-app.listen(port);
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("App is running on port " + port);
+});
 console.log('\nserver.js listening for routes');
