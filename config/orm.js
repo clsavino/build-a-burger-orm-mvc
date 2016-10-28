@@ -41,8 +41,6 @@ var orm = {
     queryString = queryString + printQuestionMarks(vals.length);
     queryString = queryString + ') ';
 
-    console.log('\n insertOne queryString in orm.js',queryString);
-
     connection.query(queryString, vals, function (err, result) {
       if (err) throw err;
       cb(result);
