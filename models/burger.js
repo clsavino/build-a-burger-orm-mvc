@@ -8,7 +8,6 @@ var table = "burgers";
 var burger = {
   selectAll: function (cb) {
     orm.selectAll(table, function (res) {
-      console.log('\nburger.js cb');
       cb(res);
     });
   },
