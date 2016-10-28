@@ -32,18 +32,25 @@ li {
   font-size: 18px;
 }
 
-.btnSubmit {
+.btnDevour {
     background: #FF851B;
     color: black;
     padding: 5px;
     border: 1px solid #FF851B;
     border-radius: 5px;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 #btnCreate {
   display: block;
   margin: 0 auto;
+  background: #FF851B;
+  color: black;
+  padding: 5px;
+  border: 1px solid #FF851B;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 #btnDelete {
@@ -57,7 +64,7 @@ ul,li {
   margin: 0;
   padding: 0;
 }
-/*
+
 .rightBurgers {
-  text-align: right;
+  float: right;
 }
