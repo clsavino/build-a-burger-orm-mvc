@@ -7,7 +7,6 @@ var orm = require('../config/orm.js');
 var table = "burgers";
 var burger = {
   selectAll: function (cb) {
-    console.log('\nburger.selectAll in burger.js')
     orm.selectAll(table, function (res) {
       console.log('\nburger.js cb');
       cb(res);
