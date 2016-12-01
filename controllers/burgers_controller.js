@@ -19,8 +19,10 @@ router.get('/burgers', function (req, res) {
 
 router.post('/burgers/insertOne', function (req, res) {
   burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, false], function () {
+    console.log("in callback");
     res.redirect('/burgers');
   });
+  console.log("after insert");
 });
 
 router.put('/burgers/updateOne/:id', function (req, res) {

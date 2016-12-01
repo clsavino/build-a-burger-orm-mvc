@@ -1,3 +1,4 @@
+
 var connection = require('../config/connection.js');
 
 function printQuestionMarks(num) {
@@ -21,17 +22,17 @@ function objToSql(ob) {
 
 // Retrieve all the data from the database
 var orm = {
-  selectAll: function (table, cb) {
+  selectAll: function (table, callback) {
     var queryString = 'SELECT * FROM ' + table + ';';
     connection.query(queryString, function (err, result) {
       if (err) throw err;
-      cb(result);
+      callback(result);
     });
   },
 
     // vals is an array of values that we want to save to cols
     // cols are the columns we want to insert the values into
-  insertOne: function (table, cols, vals, cb) {
+  insertOne: function (table, cols, vals, callback) {
     var queryString = 'INSERT INTO ' + table;
 
     queryString = queryString + ' (';
@@ -43,12 +44,12 @@ var orm = {
 
     connection.query(queryString, vals, function (err, result) {
       if (err) throw err;
-      cb(result);
+      callback(result);
     });
   },
     // objColVals are the columns and values to update
     // an example of objColVals would be {name: all_american, devoured: false}
-  updateOne: function (table, objColVals, condition, cb) {
+  updateOne: function (table, objColVals, condition, callback) {
     var queryString = 'UPDATE ' + table;
 
     queryString = queryString + ' SET ';
@@ -58,11 +59,11 @@ var orm = {
 
     connection.query(queryString, function (err, result) {
       if (err) throw err;
-      cb(result);
+      callback(result);
     });
   },
 
-  delete: function (table, condition, cb) {
+  delete: function (table, condition, callback) {
     var queryString = 'DELETE FROM ' + table;
     queryString = queryString + ' WHERE ';
     queryString = queryString + condition;
@@ -70,7 +71,7 @@ var orm = {
     console.log(queryString);
     connection.query(queryString, function (err, result) {
       if (err) throw err;
-      cb(result);
+      callback(result);
     });
   }
 };
