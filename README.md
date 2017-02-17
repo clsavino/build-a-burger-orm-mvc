@@ -21,7 +21,7 @@ Build A Burger is hosted on Heroku and uses JAWSDB to store all the burger data.
 * **method-override**
 
 ##### Getting Started
-* **https://rocky-citadel-91941.herokuapp.com/burgers
-* **Or Clone or fork and run using server.js in the command line.**
+* https://build-a-burger-orm-mvc.herokuapp.com/burgers
+* **Or Clone or fork and run using node server.js in the command line.**
 * **Use localhost:3000**
 
