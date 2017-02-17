@@ -1,6 +1,6 @@
 # build-a-burger-orm-mvc
 
-Build a Burger app demonstrates a backend server using NodeJS with Express Routing. All data is stored in a database. App uses the the http methods GET, PUSH, and DELETE. Built using the ORM and MVC models for the file structure.
+Build a Burger app demonstrates a backend server using NodeJS with Express Routing. All data is stored in a MySQL database. App uses the the http methods GET, PUSH, and DELETE. Built using the ORM and MVC models for the file structure.
 
 Build A Burger is hosted on Heroku and uses JAWSDB to store all the burger data.
 
